@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#022c22" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+
+  <!-- Inner subtle border -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="#34d399" stroke-width="4" stroke-opacity="0.3" />
+
+  <!-- Book Base with 3D Shadow -->
+  <g filter="url(#shadow)" transform="translate(96, 120)">
+    <!-- Book Pages -->
+    <path d="M160 210 C100 185 30 195 0 205 L0 45 C30 35 100 25 160 50 C220 25 290 35 320 45 L320 205 C290 195 220 185 160 210 Z" fill="#ffffff" />
+    <path d="M160 210 C100 185 30 195 0 205 L0 195 C30 185 100 175 160 200 C220 175 290 185 320 195 L320 205 C290 195 220 185 160 210 Z" fill="#e2e8f0" />
+    <!-- Book Spine Divider -->
+    <line x1="160" y1="50" x2="160" y2="210" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Left Page Character: Malayalam 'അ' -->
+    <text x="80" y="145" font-family="'Noto Sans Malayalam', sans-serif" font-size="82" font-weight="bold" fill="#047857" text-anchor="middle">അ</text>
+
+    <!-- Right Page Character: English 'A' -->
+    <text x="240" y="145" font-family="'Manrope', 'Arial', sans-serif" font-size="82" font-weight="900" fill="#0284c7" text-anchor="middle">A</text>
+  </g>
+
+  <!-- Golden Achievement Star -->
+  <g transform="translate(256, 90)">
+    <polygon points="0,-32 9,-10 32,-10 14,5 20,28 0,14 -20,28 -14,5 -32,-10 -9,-10" fill="url(#goldGrad)" filter="url(#shadow)" />
+  </g>
+
+  <!-- Small Malayalam Subtitle Ribbon -->
+  <rect x="126" y="380" width="260" height="44" rx="22" fill="#047857" stroke="#10b981" stroke-width="2" />
+  <text x="256" y="410" font-family="'Noto Sans Malayalam', sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">ഇംഗ്ലീഷ് പഠിക്കാം</text>
+</svg>
